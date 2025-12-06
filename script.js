@@ -1,13 +1,16 @@
-let zname = "Admin";
+let matrix = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+];
+let sum = 0;
+let line = "" ;
 
+for (let row of matrix) {
+    for (let value of row) {
+       sum += value;
+       line += value + " "
+    }
+}
 
-if (zname === "Admin") {
-  let pass = "TheMaster";
-            if (pass === "TheMaster") {
-                console.log("Welcome")
-            } else if (pass === "" || pass === null){console.log("Canceled")}
-            else {console.log("Wrong password")}
-
-} else if (zname === "" || zname === null) {
-    console.log("Cancelled")
-} else {console.log("Idk")}
+ console.log(line)
