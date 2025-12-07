@@ -21,6 +21,3 @@ totals = el + totals;
 }
 
 
-
-let customersTaxed = customers.map(customersTaxCount);
-console.log(customersTaxed)
