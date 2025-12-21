@@ -1,12 +1,94 @@
 
 
+/*
+const container = document.querySelector("#container");
+
+const content = document.createElement("div");
+
+const fancyText = document.createElement("p");
+const fancyHeadlineH3 = document.createElement("h3");
+const secondContainer = document.createElement("div");
+const fancyHeadlineH1 = document.createElement("h1");
+const fancyText2 = document.createElement("p");
+
+
+content.classList.add("content");
+content.textContent = "This is the glorious text-content!";
+container.appendChild(content);
+
+container.appendChild(fancyText);
+container.appendChild(fancyHeadlineH3);
+
+secondContainer.appendChild(fancyHeadlineH1);
+secondContainer.appendChild(fancyText2);
+
+container.appendChild(secondContainer);
+
+fancyText.textContent = "Hey I’m red!";
+fancyText.style.cssText = "color: red;"
+fancyHeadlineH3.textContent = "I’m a blue h3!";
+fancyHeadlineH3.style.cssText = "color: blue;"
+
+secondContainer.style.cssText = "border: 1px solid black; background-color: pink;";
+fancyHeadlineH1.style.cssText = "padding: 20px;";
+fancyHeadlineH1.textContent = "Im in div!";
+fancyText2.textContent = "Me TOO!";
+fancyText2.style.cssText = "padding: 0 20px;";
+
+const parentContainer = document.querySelector("#container");
+const lastParagraph = document.querySelector(".ParagraphTree");
+const firstParagraph = document.querySelector(".ParagraphMain")
+
+const div = document.createElement("div");
+
+// Наша уязвимая функция
+function sayHello(userName) {
+  const container = document.querySelector(".ParagraphMain");
+
+  // ВНИМАНИЕ: Мы используем innerHTML для вставки данных
+  let dirtyCode = "Привет, " + userName + "!";
+  let cleanCode = DOMPurify.sanitize(dirtyCode, {ALLOWED_TAGS: ["i", "sup"]});
+  container.innerHTML = cleanCode;
+}
+let userName = prompt("What is name");
+
+sayHello(userName)
 
 
 
 
 
+const parentContainer = document.querySelector("#container");
+const lastParagraph = document.querySelector(".ParagraphTree");
+const firstParagraph = document.querySelector(".ParagraphMain")
 
-/*const convertToCelsius = function (fahrenheit) {
+const div = document.createElement("div");
+
+// Наша уязвимая функция
+function sayHello(userName) {
+  const container = document.querySelector(".ParagraphMain");
+
+  // ВНИМАНИЕ: Мы используем innerHTML для вставки данных
+  let dirtyCode = "Привет, " + userName + "!";
+  let cleanCode = DOMPurify.sanitize(dirtyCode);
+  container.innerHTML = cleanCode;
+}
+let userName = prompt("What is name");
+
+sayHello(userName)
+
+const parentContainer = document.querySelector("#container");
+const lastParagraph = document.querySelector(".ParagraphTree");
+
+
+const div = document.createElement("div");
+
+parentContainer.insertBefore(div, lastParagraph)
+parentContainer.removeChild(lastParagraph)
+div.style.cssText = "display: flex; background-color: red; padding: 12px;"
+
+
+const convertToCelsius = function (fahrenheit) {
   return Math.round((fahrenheit - 32) * (5 / 9) * 10) / 10;
 };
 
